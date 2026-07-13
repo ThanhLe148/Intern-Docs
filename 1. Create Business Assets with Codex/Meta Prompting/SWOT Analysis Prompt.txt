@@ -1,0 +1,174 @@
+Act as a senior medtech strategy consultant and electrophysiology market analyst. Prepare a detailed, data-driven SWOT analysis of Boston Scientific’s FARAPULSE pulsed field ablation (PFA) system in the current global competitive landscape.
+
+Objective:
+Develop an investment-grade / strategy-grade SWOT analysis that assesses FARAPULSE as a product platform and as a competitive franchise within atrial fibrillation ablation and adjacent electrophysiology markets.
+
+Scope:
+- Focus on FARAPULSE and its related ecosystem (e.g., FARAWAVE, FARAWAVE NAV, FARASTAR, FARADRIVE, mapping/workflow integration, and relevant pipeline extensions if supported by evidence).
+- Compare FARAPULSE against major current and emerging competitors in PFA and adjacent AF ablation, including at minimum:
+  - Medtronic PulseSelect
+  - Medtronic Affera / Sphere-9 (if relevant to the same workflow or future overlap)
+  - Johnson & Johnson / Biosense Webster Varipulse
+  - Abbott Volt PFA
+  - Kardium Globe system
+  - Thermal alternatives only where strategically relevant (RF/cryo) as incumbent substitutes
+- Cover the U.S., Europe, and major ex-U.S. markets if data is available.
+
+Research standards:
+1. Use only verifiable, up-to-date sources.
+2. Prioritize the most recent information available, especially from:
+   - FDA announcements
+   - CE mark / regulatory updates
+   - Company press releases
+   - earnings calls and investor presentations
+   - peer-reviewed studies
+   - Heart Rhythm Society (HRS), AF Symposium, EHRA, and major conference data
+   - trial registries
+   - reputable medtech trade publications
+   - major sell-side / industry analyses where accessible
+3. Cite every material factual claim inline with source name and date.
+4. If evidence is mixed, explicitly say so.
+5. Do not hallucinate market share, pricing, adoption, clinical performance, or physician preference. If exact data is unavailable, say “not publicly disclosed” and provide the closest supported proxy.
+
+Required analytical framework:
+
+A. Executive summary
+- Provide a concise 8–12 bullet executive summary.
+- State the single most important bullish thesis and the single most important bear thesis for FARAPULSE.
+
+B. Market context
+- Explain the current state of the PFA market:
+  - technology adoption trends
+  - shift from RF/cryo to PFA
+  - total addressable market and procedure growth (if source-supported)
+  - importance of workflow, mapping integration, safety profile, procedure time, learning curve, and expansion into persistent AF / complex arrhythmias
+- Summarize where FARAPULSE sits in the market today.
+
+C. Product and clinical profile of FARAPULSE
+- Summarize:
+  - mechanism of action
+  - key product components
+  - approved indications by region
+  - major clinical trial and registry evidence
+  - efficacy, safety, durability, workflow, and operator-learning considerations
+- Separate clearly:
+  - randomized evidence
+  - single-arm evidence
+  - registry / real-world evidence
+  - company-reported data vs independent publications
+
+D. Competitor benchmarking table
+Create a detailed comparison table with columns such as:
+- Company
+- System/platform
+- Regulatory status by region
+- Key indication(s)
+- Clinical evidence strength
+- Mapping integration
+- Workflow/procedure claims
+- Safety profile
+- Efficacy/durability data
+- Physician usability / learning curve signals
+- Commercial scale / installed base / adoption signals
+- Strategic advantages
+- Strategic disadvantages
+
+E. SWOT analysis (main deliverable)
+For each quadrant, provide 6–10 substantive points backed by evidence.
+
+1. Strengths
+Examples to analyze:
+- clinical efficacy and safety evidence
+- first-mover or scale advantages
+- procedural simplicity
+- mapping optionality vs integration
+- commercial momentum
+- physician adoption
+- brand / channel / installed-base leverage
+- pipeline and indication expansion potential
+
+2. Weaknesses
+Examples to analyze:
+- evidence gaps
+- dependence on narrow indications or specific catheter configurations
+- workflow limitations
+- integration disadvantages
+- durability concerns vs competitors
+- training burden
+- pricing/reimbursement pressure
+- overreliance on company-sponsored data
+- vulnerabilities in complex arrhythmia use cases
+
+3. Opportunities
+Examples to analyze:
+- expansion in persistent AF
+- first-line ablation use
+- redo ablation
+- posterior wall / adjunctive lesion sets
+- atrial flutter / CTI / ventricular applications if evidence supports
+- international expansion
+- ambulatory / ASC migration
+- premium pricing / mix-shift potential
+- cross-sell with mapping or EP ecosystem assets
+- head-to-head evidence generation opportunities
+
+4. Threats
+Examples to analyze:
+- competitor product launches and next-gen platforms
+- integrated mapping ecosystems from rivals
+- adverse clinical readouts
+- safety events or post-market issues
+- physician switching costs
+- procurement pressure from hospitals / IDNs
+- reimbursement changes
+- commoditization as PFA matures
+- legal / regulatory scrutiny
+- faster innovation cycles from competitors
+
+F. Competitive position assessment
+- Answer explicitly:
+  1. Is FARAPULSE currently the clinical leader, commercial leader, both, or neither?
+  2. How durable is its leadership over the next 2–3 years?
+  3. Which competitor is the most credible threat and why?
+  4. What are the top 3 factors that could improve or weaken FARAPULSE’s position materially?
+
+G. Scenario analysis
+Provide three scenarios:
+- Base case
+- Upside case
+- Downside case
+
+For each scenario include:
+- assumptions
+- likely market/competitive developments
+- implications for FARAPULSE adoption, pricing power, and strategic position
+
+H. Final judgment
+- End with a sharp conclusion:
+  - “Net strategic position: Very strong / strong / mixed / vulnerable”
+  - Explain why in one paragraph.
+- Then provide:
+  - Top 5 watch items for the next 12 months
+  - Top 5 diligence questions an investor, strategist, or medtech executive should ask
+
+Output requirements:
+- Use clear section headings
+- Use bullet points plus narrative analysis
+- Include at least one competitor comparison matrix
+- Include one final SWOT summary table
+- Include a source list grouped by:
+  - regulatory
+  - company disclosures
+  - clinical literature
+  - conference presentations
+  - industry/market commentary
+
+Quality bar:
+- Be analytical, not descriptive.
+- Distinguish evidence from inference.
+- Highlight where Boston Scientific messaging may be promotional versus independently validated.
+- Where available, compare FARAPULSE not just on efficacy/safety but also on usability, integration, market access, and strategic monetization.
+- If a key datapoint cannot be verified, label it explicitly as unknown rather than estimating.
+
+Tone:
+Professional, rigorous, data-driven, investor-grade, and suitable for senior leadership, private equity diligence, equity research, or strategic planning.
