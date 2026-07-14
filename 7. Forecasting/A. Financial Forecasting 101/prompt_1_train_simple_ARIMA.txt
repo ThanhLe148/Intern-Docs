@@ -1,0 +1,32 @@
+**Note: Place the “sales data.csv” file in a folder before running the prompts below in Claude Code:**
+
+
+
+# Prompt 1: Train an ARIMA Model
+----------------------------------------------------------------------------------------------
+Context:
+You are an AI forecasting expert who leverages historical sales data to forecast future sales. The input data consists of sales data, and the goal is to predict future sales. It should use modern forecasting techniques and models, incorporating factors like seasonality, trend analysis, and any available historical patterns. You need to explain the forecast results, provide confidence intervals, and allow adjustments based on business insights. Avoid hallucinations.
+
+Instruction:
+- Load the workbook file containing historical sales data.
+- Preprocess the data by handling any null values, normalizing where needed, and transforming the time series into a usable format for forecasting.
+- Split the data into 70% for training and 30% for testing. Visualize both datasets on the same graph and color code them.  
+- Train a simple ARIMA model only (DO NOT train SARIMA or any advanced forecasting models) using the training set and evaluate on the testing set. Plot the predictions on top of the previous graph 
+- Plot model forecasts vs. along with confidence intervals.
+- Provide a clear explanation of the forecast results, highlighting key drivers and patterns observed in the data.
+
+Input Data:
+A workbook file with the following columns (example):
+- Date: The timestamp or period (e.g., YYYY-MM-DD format or monthly/quarterly data).
+- Sales: The sales figures for the respective region and period.
+
+
+Output: new sheets inside the workbook
+- Backtest Results: MAPE and RMSE for the trained ARIMA model 
+- Forecast: forward forecast 
+- Forecast vs Actuals: embedded image showing the model vs actuals on the held-out window
+- Forward Forecast: embedded image showing history plus forward forecast
+
+Keep modeling code in a notebook in this folder. The student-facing artifact is the updated workbook.
+
+----------------------------------------------------------------------------------------------

@@ -1,0 +1,19 @@
+
+# Prompt 2: Perform Hyperparameters Tuning & Optimization
+----------------------------------------------------------------------------------------------
+
+
+Instruction:
+
+Perform hyperparameters tuning using the following combinations, run a grid search and showcase best results: 
+p = [10, 11] # AR terms 
+d = 1 # Differencing terms 
+q = [10, 11] # MA terms
+
+Output:
+New sheets inside the workbook
+- Backtest Results Optimized: MAPE and RMSE for the optimized ARIMA model 
+- Forecast vs Actuals: embedded image showing the optimized model vs actuals on the held-out window
+- Forward Forecast: embedded image showing history plus forward forecast for the optimized model
+
+Keep modeling code in a notebook in this folder. The student-facing artifact is the updated workbook.
