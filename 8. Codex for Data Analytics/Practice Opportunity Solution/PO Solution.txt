@@ -1,0 +1,71 @@
+Prompt 1: Create The LinkedIn Skill
+
+Context: Codex can use local skills to follow reusable workflows. In this practice, create a local Codex skill based on a public LinkedIn post skill example from SkillHub. The goal is to help Codex draft, rewrite, optimize, and polish LinkedIn posts.
+
+Instruction:
+Use @skill-creator to create a local Codex skill named linkedin-post-coach at .agents/skills/linkedin-post-coach/SKILL.md. Adapt the workflow from this SkillHub example: https://www.skillhub.club/skills/different-ai-zero-finance-linkedin-post
+
+The skill should help Codex:
+
+draft LinkedIn posts
+create hooks
+suggest hashtags
+write CTAs
+adjust tone
+rewrite posts for clarity
+turn rough ideas into professional LinkedIn content
+The skill must include YAML frontmatter with name: linkedin-post-coach and a clear description so Codex auto-discovers it on launch.
+
+Input:
+https://www.skillhub.club/skills/different-ai-zero-finance-linkedin-post
+
+Output:
+.agents/skills/linkedin-post-coach/SKILL.md
+
+
+
+
+
+
+Prompt 2: Use The LinkedIn Skill
+
+Context: You now have a local Codex skill named @linkedin-post-coach. Use it to turn a rough idea into a polished LinkedIn post.
+
+Instruction:
+Use @linkedin-post-coach to write a LinkedIn post on the State of AI based on the report included in this folder. Make the post human in Ryan Ahmed's voice.
+
+
+Output:
+reports/linkedin_post_draft.md
+The draft should include:
+3 hook options
+1 polished LinkedIn post
+3 CTA options
+5 hashtag suggestions
+
+
+
+
+
+
+
+Prompt 3: Improve The LinkedIn Post
+
+Context: The first LinkedIn draft is complete. Now use the skill again to improve it for a more professional audience.
+
+Instruction:
+Use @linkedin-post-coach to revise reports/linkedin_post_draft.md.
+
+Create a new file, reports/linkedin_post_final.md, with:
+
+the strongest hook
+a final polished LinkedIn post
+a shorter version under 900 characters
+a more conversational version
+final hashtag recommendations
+Input:
+
+reports/linkedin_post_draft.md
+Output:
+
+reports/linkedin_post_final.md
