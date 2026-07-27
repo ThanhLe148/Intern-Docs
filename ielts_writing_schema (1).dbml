@@ -1,0 +1,111 @@
+// ============================================================
+// IELTS Writing Web-App — DBML Schema
+// Import truc tiep vao https://dbdiagram.io (menu Import > DBML)
+// ============================================================
+
+Enum user_role {
+  teacher
+  student
+}
+
+Enum task_type {
+  task1
+  task2
+}
+
+Enum submission_status {
+  draft
+  submitted
+  graded
+}
+
+Table profiles {
+  id uuid [pk, note: 'references auth.users(id)']
+  full_name text [not null]
+  role user_role [not null, default: 'student']
+  avatar_url text
+  created_at timestamptz [not null, default: `now()`]
+}
+
+Table classes {
+  id uuid [pk, default: `gen_random_uuid()`]
+  name text [not null]
+  teacher_id uuid [not null]
+  created_at timestamptz [not null, default: `now()`]
+}
+
+Table class_enrollments {
+  id uuid [pk, default: `gen_random_uuid()`]
+  class_id uuid [not null]
+  student_id uuid [not null]
+  joined_at timestamptz [not null, default: `now()`]
+
+  indexes {
+    (class_id, student_id) [unique]
+  }
+}
+
+Table writing_tasks {
+  id uuid [pk, default: `gen_random_uuid()`]
+  class_id uuid [not null]
+  created_by uuid [not null]
+  title text [not null]
+  task_type task_type [not null]
+  prompt_text text [not null]
+  band_target decimal(2,1) [note: 'vd: 6.5']
+  due_date timestamptz
+  created_at timestamptz [not null, default: `now()`]
+}
+
+Table task_images {
+  id uuid [pk, default: `gen_random_uuid()`]
+  task_id uuid [not null]
+  image_path text [not null, note: 'path trong Supabase Storage, khong luu binary']
+  caption text
+  display_order int [not null, default: 1]
+  created_at timestamptz [not null, default: `now()`]
+}
+
+Table submissions {
+  id uuid [pk, default: `gen_random_uuid()`]
+  task_id uuid [not null]
+  student_id uuid [not null]
+  attempt_number int [not null, default: 1, note: 'tu dong tang qua trigger']
+  essay_text text [not null]
+  word_count int [note: 'generated column, tu tinh tu essay_text']
+  status submission_status [not null, default: 'draft']
+  submitted_at timestamptz
+  created_at timestamptz [not null, default: `now()`]
+  updated_at timestamptz [not null, default: `now()`]
+
+  indexes {
+    (task_id, student_id, attempt_number) [unique]
+  }
+}
+
+Table feedback {
+  id uuid [pk, default: `gen_random_uuid()`]
+  submission_id uuid [not null, unique, note: '1 feedback / 1 submission']
+  teacher_id uuid [not null]
+  band_task_response decimal(2,1)
+  band_coherence_cohesion decimal(2,1)
+  band_lexical_resource decimal(2,1)
+  band_grammar_accuracy decimal(2,1)
+  band_overall decimal(2,1) [note: 'generated: trung binh 4 tieu chi, lam tron 0.5']
+  comment_text text
+  graded_at timestamptz [not null, default: `now()`]
+}
+
+// ============================================================
+// RELATIONSHIPS
+// ============================================================
+Ref: classes.teacher_id > profiles.id            // 1 giao vien - nhieu lop
+Ref: class_enrollments.class_id > classes.id      // 1 lop - nhieu hoc sinh (qua bang noi)
+Ref: class_enrollments.student_id > profiles.id   // 1 hoc sinh - nhieu lop
+Ref: writing_tasks.class_id > classes.id          // 1 lop - nhieu de bai
+Ref: writing_tasks.created_by > profiles.id       // giao vien tao de
+Ref: task_images.task_id > writing_tasks.id       // 1 de - nhieu anh chart (Task 1)
+Ref: submissions.task_id > writing_tasks.id       // 1 de - nhieu lan nop (nhieu hoc sinh, nhieu attempt)
+Ref: submissions.student_id > profiles.id         // 1 hoc sinh - nhieu lan nop
+Ref: feedback.submission_id - submissions.id      // 1-1: moi lan nop co 1 feedback
+Ref: feedback.teacher_id > profiles.id            // giao vien cham diem
